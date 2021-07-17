@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Objectif : Le but de se projet est de se former à React en apprenant les bases à travers la création d'un mini site utilisant diverses fonctionnalités de React.
+
 ## Available Scripts
 
 In the project directory, you can run:
