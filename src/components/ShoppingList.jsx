@@ -1,17 +1,14 @@
 import { plantList } from '../datas/plantList'
+import PlantItem from './PlantItem'
 import '../styles/ShoppingList.css'
 
 function ShoppingList() {
-    //On utilise reduce et on vérifie si son accumulateur contient déjà la catégorie de la plante avec 'acc.includes(plant.category)' 
-    //et si ce n'est pas le cas, on l'ajoute à l'accumulateur avec 'acc.concat(plant.category)'
 	const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
 		[]
-	);
+	)
 
-    //Affiche une liste des différentes catégories 
-    //puis la liste des plantes avec un emoji flamme si celle ci fait partie des meilleures ventes
 	return (
 		<div>
 			<ul>
@@ -20,15 +17,18 @@ function ShoppingList() {
 				))}
 			</ul>
 			<ul className='lmj-plant-list'>
-				{plantList.map((plant) => (
-					<li key={plant.id} className='lmj-plant-item'>
-						{plant.name}
-						{plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
-					</li>
+				{plantList.map(({ id, cover, name, water, light }) => (
+					<PlantItem
+						id={id}
+						cover={cover}
+						name={name}
+						water={water}
+						light={light}
+					/>
 				))}
 			</ul>
 		</div>
-	);
+	)
 }
 
 export default ShoppingList
