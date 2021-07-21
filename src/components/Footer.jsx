@@ -17,7 +17,7 @@ function Footer() {
 	return (
 		<footer className='lmj-footer'>
 			<div className='lmj-footer-elem'>
-				Pour les passionnés de plantes au masculin 🌿🌱🌵
+				Pour les passionnés de plantes 🌿🌱🌵
 			</div>
 			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
 			<input
